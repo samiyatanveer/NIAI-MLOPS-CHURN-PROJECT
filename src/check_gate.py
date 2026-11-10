@@ -17,7 +17,11 @@ def main():
     # TODO S3.1: If f1 is below min_f1, print a FAIL message and exit with code 1.
     # Otherwise print a PASS message.
     # Hint: sys.exit(1)
-    pass
+        if f1 < min_f1:
+         print(f"QUALITY GATE FAILED: f1={f1:.2f} < min_f1={min_f1:.2f}")
+         sys.exit(1)
+        else:
+         print(f"QUALITY GATE PASSED: f1={f1:.2f} >= min_f1={min_f1:.2f}")
 
 
 if __name__ == "__main__":
